@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            padding: 10px;
+            border-radius: 8px;
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return check(event)">
+        <label for="name">Name</label> <br>
+        <input type="text" id="name">
+        <br>
+        <label for="email">Email</label> <br>
+        <input type="email" id="email">
+        <br>
+        <label for="password">Password</label> <br>
+        <input type="password" id="password">
+        <br> <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function check(event){
+        const username =document.getElementById('name').value;
+        const email =document.getElementById('email').value;
+        const password =document.getElementById('password').value;
+        if(!checkname(username)){
+            alert('enter the name');
+        }
+        if(!checkemail(email)){
+            alert('enter the email');
+        }
+        if(!checkpassword(password)){
+            alert('enter the password');
+        }
+        console.log(event);
+    }
+        function checkname(username){
+            return username;
+        }
+        function checkemail(email){
+            return email;
+        }
+        function checkpassword(password){
+            return password;
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .result p {
+            margin: 5px 0;
+        }
+
+        .error {
+            color: red;
+        }
+
+        nav, .section {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Navbar</h2>
+        <p id="navbar-user">User ID: Not Set</p>
+    </nav>
+
+    <div class="container">
+        <h1>GitHub User Info</h1>
+        <div class="input-container">
+            <input type="text" id="username" placeholder="Enter GitHub Username">
+            <button id="info">Get Info</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <div class="section">
+        <h2>Profile Page</h2>
+        <p id="profile-user">User ID: Not Set</p>
+    </div>
+
+    <div class="section">
+        <h2>Billing Page</h2>
+        <p id="billing-user">User ID: Not Set</p>
+    </div>
+
+    <div class="section">
+      <h2>Storage Values</h2>
+      <p><strong>Global Storage:</strong> <span id="global-storage">Not Set</span></p>
+      <p><strong>Local Storage:</strong> <span id="local-storage">Not Set</span></p>
+      <button id="clear-storage">Clear Local Storage</button>
+  </div>
+  
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
+

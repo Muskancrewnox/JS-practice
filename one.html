@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: grey;
+        }
+        input{
+            padding: 10px;
+            border-radius: 8px;
+            border:1px solid rgb(34, 34, 34);
+            outline: none;
+           
+        }
+        .result{
+            font-size: 15px;
+            color: white;
+           
+        }
+        
+        #submits{
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        label{
+            text-align: left;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Area</h1>
+    <label for="length">Enter length(in cm):</label> <br>
+    <input type="number" id="length" > <br>
+    <label for="breadth"> Enter breadth(in cm):</label> <br>
+    <input type="number" id="breadth"> <br>
+    <div class="result"></div>
+    <button type="submit" id="submits">Calculate</button> <br>
+    </div>
+    
+    <script>
+    document.getElementById("submits").addEventListener('click',()=>{
+        let length= document.getElementById('length').value;
+        let breadth= document.getElementById('breadth').value;
+        let result = document.querySelector('.result');
+        if((length=="" || length<=0)||(breadth=="" || breadth<=0)){
+            result.textContent="Enter a valid Length and Breadth";
+        }
+        else{
+           
+            let area = length*breadth;
+            result.innerHTML=`Area is ${area}cm<sup>2</sup>`;
+            document.getElementById('length').value="";
+            document.getElementById('breadth').value="";
+            meter = document.createElement('button');
+            meter.textContent="In meter";
+            meter.style.marginLeft= "10px"
+            result.appendChild(meter);
+            meter.addEventListener('click',()=>{
+                area2=(length*breadth)/10000
+
+                result.innerHTML=`Area is ${area2}m<sup>2</sup>`;
+            })
+        
+
+        }
+    })
+    </script>
+</body>
+</html>
