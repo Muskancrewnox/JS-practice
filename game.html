@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+       }
+       body{
+         display: flex;
+         justify-content: center;
+         font-family: 'Arial';
+
+       }
+       .container{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+       }
+       .msg-container.hide{
+        display: none;
+       }
+       .boxes{
+        display: flex;
+        width: 325px;
+        flex-wrap: wrap;
+
+       } p{
+        text-align: center;
+       }
+       .box{
+        height: 100px;
+        width: 100px;
+        background-color:rgb(112, 112, 183);
+        color: aquamarine;
+        margin: 4px;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size:100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+       
+       }
+       .total{
+            padding:6px;
+            color: rgb(2, 2, 104);
+            font-size: 20px;
+            font-weight: 500;
+            background-color: aquamarine;
+            margin: 4px;
+        }
+        .xwin{
+            padding:6px;
+            color: rgb(2, 2, 104);
+            font-size: 20px;
+            background-color: aquamarine;
+            margin: 4px;
+            font-weight: 500;
+        }
+        .owin{
+            padding:6px;
+            color: rgb(2, 2, 104);
+            font-size: 20px;
+            background-color: aquamarine;
+            margin: 4px;
+            font-weight: 500;
+        }
+       button{
+        padding: 10px ;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(19, 2, 80);
+        color: white;
+        font-size:16px ;
+        font-weight: 600;
+      cursor: pointer;
+
+       }
+       #msg{
+        color: rgb(4, 4, 145);
+        font-size: 22px;
+       }
+       h1{
+        text-align: center;
+        color: rgb(2, 2, 69);
+       }
+        .msg-container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div class="msg-container hide">
+            <p id="msg"></p>
+            <button id="new">New Game</button>
+        </div>
+        <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <button id="reset">Reset Game</button>
+        <div class="storage">
+            <p class="total"><b>Total Games:</b> 0</p>
+            <p class="owin"><b>O Wins:</b> 0</p>
+            <p class="xwin"><b>X Wins:</b> 0</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
